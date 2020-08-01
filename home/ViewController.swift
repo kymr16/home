@@ -53,7 +53,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
         if getLocationData.first != nil {
             settingView.isHidden = true
         }
-
     }
     
     
@@ -144,12 +143,19 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
     
     //設定する
     @IBAction func setLocation(_ sender: Any) {
+        //インスタンス化
+        location = Location()
+        
+        if getLocationData.count != 0 {
+            location.id = getLocationData.max(ofProperty: "id")! + 1
+        }
+        
         try! realm.write {
-            //エラーになる
             self.location.postalCode = postalCodeField.text ?? ""
             self.location.homeAddress = self.addressField.text!
             self.realm.add(self.location, update: .modified)
         }
+        
     }
     
     // フォームがキーボードで隠れないようにするメソッド群
