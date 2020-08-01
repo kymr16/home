@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="かえりたい" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bix-wt-xl9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </arscnView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exA-Do-e8U">
+                                <rect key="frame" x="16" y="634" width="382" height="228"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WNx-hZ-czT">
+                                        <rect key="frame" x="16" y="24" width="350" height="180"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自宅の住所を設定しましょう" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W46-LY-tRL">
+                                                <rect key="frame" x="71" y="0.0" width="208" height="16"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                                <color key="textColor" name="Text"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GvR-Ud-Tje">
+                                                <rect key="frame" x="0.0" y="32" width="350" height="88"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sQb-Ls-6xW">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="郵便番号 (任意)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sdo-hJ-eCN">
+                                                            <rect key="frame" x="16" y="0.0" width="318" height="44"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="bpv-Rg-hUd"/>
+                                                            </constraints>
+                                                            <color key="textColor" name="Text"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="postal-code"/>
+                                                        </textField>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="住所" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sS2-1a-GES">
+                                                            <rect key="frame" x="16" y="44" width="318" height="44"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="44" id="Kf8-ah-DiO"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
+                                                            <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="street-address"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="sdo-hJ-eCN" firstAttribute="top" secondItem="sQb-Ls-6xW" secondAttribute="top" id="8qJ-gh-57n"/>
+                                                        <constraint firstItem="sS2-1a-GES" firstAttribute="leading" secondItem="sQb-Ls-6xW" secondAttribute="leading" constant="16" id="BiE-F0-45F"/>
+                                                        <constraint firstItem="sS2-1a-GES" firstAttribute="top" secondItem="sQb-Ls-6xW" secondAttribute="top" constant="44" id="G8q-HK-n4O"/>
+                                                        <constraint firstItem="sS2-1a-GES" firstAttribute="centerX" secondItem="sQb-Ls-6xW" secondAttribute="centerX" id="Njk-wN-b1j"/>
+                                                        <constraint firstAttribute="trailing" secondItem="sdo-hJ-eCN" secondAttribute="trailing" constant="16" id="jfw-KF-HfC"/>
+                                                        <constraint firstItem="sdo-hJ-eCN" firstAttribute="centerX" secondItem="sQb-Ls-6xW" secondAttribute="centerX" id="pk6-Li-S6N"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="16"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="88" id="lDo-vc-fgU"/>
+                                                </constraints>
+                                                <blurEffect style="systemThinMaterialLight"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </visualEffectView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="taV-hD-DO6">
+                                                <rect key="frame" x="0.0" y="136" width="350" height="44"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-WK-Kx0">
+                                                        <rect key="frame" x="0.0" y="0.0" width="167" height="44"/>
+                                                        <color key="backgroundColor" name="Background"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="g9X-IM-3yZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                        <state key="normal" title="現在地から自動入力">
+                                                            <color key="titleColor" name="Primary"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="getLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfa-mL-O8N"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUB-CY-NdF">
+                                                        <rect key="frame" x="183" y="0.0" width="167" height="44"/>
+                                                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="44" id="r6S-1v-AtK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="14"/>
+                                                        <state key="normal" title="設定する">
+                                                            <color key="titleColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <integer key="value" value="8"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="setLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S5e-di-Ycw"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="AUB-CY-NdF" secondAttribute="trailing" id="6sd-SZ-WkR"/>
+                                                    <constraint firstItem="Tw8-WK-Kx0" firstAttribute="leading" secondItem="taV-hD-DO6" secondAttribute="leading" id="jJ9-sI-nN9"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="GvR-Ud-Tje" firstAttribute="leading" secondItem="WNx-hZ-czT" secondAttribute="leading" id="1L1-C0-Ts3"/>
+                                            <constraint firstAttribute="trailing" secondItem="taV-hD-DO6" secondAttribute="trailing" id="1ou-Ha-HTM"/>
+                                            <constraint firstAttribute="trailing" secondItem="GvR-Ud-Tje" secondAttribute="trailing" id="5Gu-v0-CvQ"/>
+                                            <constraint firstItem="GvR-Ud-Tje" firstAttribute="centerX" secondItem="WNx-hZ-czT" secondAttribute="centerX" id="b6g-c9-PJn"/>
+                                            <constraint firstItem="taV-hD-DO6" firstAttribute="leading" secondItem="WNx-hZ-czT" secondAttribute="leading" id="bAK-mz-fIL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="WNx-hZ-czT" firstAttribute="centerY" secondItem="exA-Do-e8U" secondAttribute="centerY" id="J8J-ES-6ZT"/>
+                                    <constraint firstAttribute="trailing" secondItem="WNx-hZ-czT" secondAttribute="trailing" constant="16" id="S0C-xu-Z3j"/>
+                                    <constraint firstAttribute="bottom" secondItem="WNx-hZ-czT" secondAttribute="bottom" constant="24" id="VgJ-8X-ZA7"/>
+                                    <constraint firstItem="WNx-hZ-czT" firstAttribute="leading" secondItem="exA-Do-e8U" secondAttribute="leading" constant="16" id="sjT-VK-s9T"/>
+                                    <constraint firstItem="WNx-hZ-czT" firstAttribute="centerX" secondItem="exA-Do-e8U" secondAttribute="centerX" id="sr6-ld-4a1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bix-wt-xl9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2yf-ah-Dva"/>
+                            <constraint firstItem="exA-Do-e8U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4vi-Sw-tKQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="exA-Do-e8U" secondAttribute="bottom" id="UyU-XF-xnS"/>
+                            <constraint firstAttribute="bottom" secondItem="Bix-wt-xl9" secondAttribute="bottom" id="Y0p-jN-VNt"/>
+                            <constraint firstItem="Bix-wt-xl9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="biS-jh-SLa"/>
+                            <constraint firstItem="Bix-wt-xl9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qPJ-Iw-J79"/>
+                            <constraint firstItem="exA-Do-e8U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rck-gu-fQt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="exA-Do-e8U" secondAttribute="trailing" constant="16" id="uSN-2H-6cc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressField" destination="sS2-1a-GES" id="GSf-Qh-J52"/>
+                        <outlet property="arView" destination="Bix-wt-xl9" id="qjc-An-ADd"/>
+                        <outlet property="bottomHeight" destination="UyU-XF-xnS" id="Wd1-6s-ugS"/>
+                        <outlet property="getLocationButton" destination="Tw8-WK-Kx0" id="Onr-Va-TO0"/>
+                        <outlet property="postalCodeField" destination="sdo-hJ-eCN" id="e36-9i-VdP"/>
+                        <outlet property="settingButton" destination="AUB-CY-NdF" id="byM-Qm-UBu"/>
+                        <outlet property="settingView" destination="exA-Do-e8U" id="Z1j-l4-kUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.99199998378753662" green="0.99199998378753662" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="1" green="0.40400001406669617" blue="0.40400001406669617" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text">
+            <color red="0.21600000560283661" green="0.17299999296665192" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
