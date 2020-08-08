@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44903CBF24D6B2B600F47527 /* ARMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44903CBE24D6B2B600F47527 /* ARMapViewController.swift */; };
 		449945AC24CC0C9500063E32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449945AB24CC0C9500063E32 /* AppDelegate.swift */; };
 		449945AE24CC0C9500063E32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449945AD24CC0C9500063E32 /* SceneDelegate.swift */; };
 		449945B024CC0C9500063E32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449945AF24CC0C9500063E32 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1E196F65FD487035CFF328E2 /* Pods-home.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-home.release.xcconfig"; path = "Target Support Files/Pods-home/Pods-home.release.xcconfig"; sourceTree = "<group>"; };
+		44903CBE24D6B2B600F47527 /* ARMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARMapViewController.swift; sourceTree = "<group>"; };
 		449945A824CC0C9500063E32 /* かえりたい.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "かえりたい.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		449945AB24CC0C9500063E32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449945AD24CC0C9500063E32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				449945B924CC0C9600063E32 /* Info.plist */,
 				449945C324CC692E00063E32 /* Location.swift */,
 				449945CC24CC8BD200063E32 /* art.scnassets */,
+				44903CBE24D6B2B600F47527 /* ARMapViewController.swift */,
 			);
 			path = home;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				449945B024CC0C9500063E32 /* ViewController.swift in Sources */,
 				449945AC24CC0C9500063E32 /* AppDelegate.swift in Sources */,
+				44903CBF24D6B2B600F47527 /* ARMapViewController.swift in Sources */,
 				449945C424CC692E00063E32 /* Location.swift in Sources */,
 				449945AE24CC0C9500063E32 /* SceneDelegate.swift in Sources */,
 			);

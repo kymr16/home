@@ -7,17 +7,29 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    
+    // Realmインスタンスを取得する
+    let getLocationData = try! Realm().objects(Location.self)
+    
+    var storyboard:UIStoryboard =  UIStoryboard(name: "Main", bundle:nil)
+    var viewController:UIViewController?
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        if getLocationData.first == nil {
+            viewController = storyboard.instantiateViewController(withIdentifier: "FirstSetting") as UIViewController
+        } else {
+            viewController = storyboard.instantiateViewController(withIdentifier: "ARMap") as UIViewController
+        }
+        
+        window?.rootViewController = viewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

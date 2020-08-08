@@ -40,8 +40,6 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
         addressField.delegate = self
         arView.delegate = self
         
-        let scene = SCNScene(named: "art.scnassets/arrow.scn")!
-        arView.scene = scene
         arView.backgroundColor = UIColor.black
         
         //キーボードでフォームが隠れないようにする
@@ -49,12 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
-        
-        if getLocationData.first != nil {
-            settingView.isHidden = true
-        }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -150,12 +143,14 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
             location.id = getLocationData.max(ofProperty: "id")! + 1
         }
         
+        //保存
         try! realm.write {
             self.location.postalCode = postalCodeField.text ?? ""
             self.location.homeAddress = self.addressField.text!
             self.realm.add(self.location, update: .modified)
         }
         
+        performSegue(withIdentifier: "toMap", sender: nil)
     }
     
     // フォームがキーボードで隠れないようにするメソッド群
@@ -183,9 +178,9 @@ class ViewController: UIViewController, UITextFieldDelegate, CLLocationManagerDe
 extension CLGeocoder {
 
     struct Address {
-        var administrativeArea: String? // 都道府県 例) 東京都
-        var locality: String? // 市区町村 例) 墨田区
-        var subLocality: String? // 地名 例) 押上
+        var administrativeArea: String? // 都道府県
+        var locality: String? // 市区町村
+        var subLocality: String? // 地名
     }
 
     func convertAddress(from postalCode: String, completion: @escaping (Address?, Error?) -> Void) {
@@ -214,4 +209,3 @@ extension CLGeocoder {
         }
     }
 }
-

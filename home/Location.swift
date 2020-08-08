@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Location: Object {
-    // 管理用 ID。プライマリーキー
+    // 管理用 ID プライマリーキー
     @objc dynamic var id = 0
     
     // 郵便番号(任意)

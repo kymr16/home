@@ -1,4 +1,5 @@
 PODS:
+  - lottie-ios (3.1.8)
   - Realm (3.20.0):
     - Realm/Headers (= 3.20.0)
   - Realm/Headers (3.20.0)
@@ -6,17 +7,20 @@ PODS:
     - Realm (= 3.20.0)
 
 DEPENDENCIES:
+  - lottie-ios
   - RealmSwift (= 3.20.0)
 
 SPEC REPOS:
   trunk:
+    - lottie-ios
     - Realm
     - RealmSwift
 
 SPEC CHECKSUMS:
+  lottie-ios: 48fac6be217c76937e36e340e2d09cf7b10b7f5f
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
 
-PODFILE CHECKSUM: 09955c99872850dd60d263d3d42b7d716e4883d6
+PODFILE CHECKSUM: 2b3da8a92da63a8937281f6b4ec119006c46e3b9
 
 COCOAPODS: 1.9.3

@@ -7,5 +7,6 @@ target 'home' do
 
   # Pods for home
   pod 'RealmSwift', '3.20.0'
+  pod 'lottie-ios'
 
 end
