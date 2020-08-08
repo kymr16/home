@@ -18,6 +18,7 @@ class ARMapViewController: UIViewController, CLLocationManagerDelegate, ARSCNVie
     @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var subTextLabel: UILabel!
     @IBOutlet weak var settingButton: UIButton!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     let getLocation = try! Realm().objects(Location.self)
     var locationManager: CLLocationManager!
@@ -36,9 +37,13 @@ class ARMapViewController: UIViewController, CLLocationManagerDelegate, ARSCNVie
         settingButton.layer.borderColor = UIColor(named: "Gray")?.cgColor
         
         if let getLocation = getLocation.last {
-          homeAddress = getLocation.homeAddress
+            indicator.isHidden = true
+            homeAddress = getLocation.homeAddress
+        } else {
+            indicator.startAnimating()
+            subTextLabel.isHidden = true
+            distanceLabel.text = ""
         }
-        
         //位置情報取得開始
         setupLocationManager()
     }

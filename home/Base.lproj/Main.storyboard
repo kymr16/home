@@ -261,6 +261,9 @@
                                         <color key="textColor" name="Text"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Bnh-GU-n6C">
+                                        <rect key="frame" x="24" y="56" width="20" height="20"/>
+                                    </activityIndicatorView>
                                 </subviews>
                                 <color key="backgroundColor" name="Background"/>
                                 <constraints>
@@ -274,8 +277,10 @@
                                     <constraint firstItem="axK-GF-qmU" firstAttribute="centerY" secondItem="PYX-pZ-Ubg" secondAttribute="centerY" id="Qu4-1q-eZO"/>
                                     <constraint firstAttribute="height" constant="132" id="Qyw-ha-zBY"/>
                                     <constraint firstItem="WAi-h9-ho5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="axK-GF-qmU" secondAttribute="trailing" constant="8" symbolic="YES" id="V5m-Do-e8G"/>
+                                    <constraint firstItem="Bnh-GU-n6C" firstAttribute="centerY" secondItem="PYX-pZ-Ubg" secondAttribute="centerY" id="iQ6-nJ-Oca"/>
                                     <constraint firstItem="axK-GF-qmU" firstAttribute="leading" secondItem="PYX-pZ-Ubg" secondAttribute="leading" constant="24" id="sYt-k8-eMZ"/>
                                     <constraint firstItem="kr9-KQ-1OV" firstAttribute="top" secondItem="PYX-pZ-Ubg" secondAttribute="top" id="vH5-9A-FMe"/>
+                                    <constraint firstItem="Bnh-GU-n6C" firstAttribute="leading" secondItem="PYX-pZ-Ubg" secondAttribute="leading" constant="24" id="xP9-5Y-7CW"/>
                                     <constraint firstAttribute="trailing" secondItem="WAi-h9-ho5" secondAttribute="trailing" constant="16" id="yTZ-HN-UoU"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
@@ -301,6 +306,7 @@
                     <connections>
                         <outlet property="arView" destination="G70-GS-dky" id="E0U-vI-FTG"/>
                         <outlet property="distanceLabel" destination="axK-GF-qmU" id="TEu-b9-Bw1"/>
+                        <outlet property="indicator" destination="Bnh-GU-n6C" id="pVg-ks-6b8"/>
                         <outlet property="settingButton" destination="WAi-h9-ho5" id="XUK-pf-63k"/>
                         <outlet property="subTextLabel" destination="efd-PU-k4l" id="Byp-G5-kfK"/>
                     </connections>
