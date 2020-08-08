@@ -35,6 +35,13 @@ class ARMapViewController: UIViewController, CLLocationManagerDelegate, ARSCNVie
         
         settingButton.layer.borderWidth = 1.0
         settingButton.layer.borderColor = UIColor(named: "Gray")?.cgColor
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let configration = ARWorldTrackingConfiguration()
+        arView.session.run(configration)
         
         if let getLocation = getLocation.last {
             indicator.isHidden = true
@@ -44,15 +51,9 @@ class ARMapViewController: UIViewController, CLLocationManagerDelegate, ARSCNVie
             subTextLabel.isHidden = true
             distanceLabel.text = ""
         }
+        
         //位置情報取得開始
         setupLocationManager()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        let configration = ARWorldTrackingConfiguration()
-        arView.session.run(configration)
     }
     
     func setupLocationManager() {
